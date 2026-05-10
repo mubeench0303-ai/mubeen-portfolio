@@ -36,7 +36,8 @@ const Stats = () => {
                             className="flex-1 flex gap-4 items-center justify-center xl:justify-start "
                         >
                             <CountUp 
-                                end={item.num}
+                                end={Number(item.num)}
+                                formattingFn={(value) => value.toString().padStart(2, "0")}
                                 duration={5}
                                 delay={2}
                                 className="text-4xl xl:text-6xl font-extrabold"
